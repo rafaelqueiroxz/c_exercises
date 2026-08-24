@@ -1,18 +1,18 @@
 /*
-	Name: 
-	Author: 
+	Name: calculoIMC.cpp
+	Author: Rafael A. Queiroz
 	Date: 24/08/26 11:37
 	Description: 	Um programa em C que leia os dados de uma pessoa como: nome, peso e
-					altura e passe para um funÁ„o que dever· devolver o c·lculo do IMC com uma
-					mensagem completa mostrando o nome da pessoa, seu peso e altura e tambÈm o
-					valor do IMC obtido por meio da funÁ„o.
+					altura e passe para um fun√ß√£o que dever√° devolver o c√°lculo do IMC com uma
+					mensagem completa mostrando o nome da pessoa, seu peso e altura e tamb√©m o
+					valor do IMC obtido por meio da fun√ß√£o.
 */
 
-// SeÁ„o de importaÁ„o
+// Se√ß√£o de importa√ß√£o
 #include <stdio.h>
 #include <Math.h>
 
-// PrototipaÁ„o de FunÁıes
+// Prototipa√ß√£o de Fun√ß√µes
 void calcularIMC(char name[], double weight, double height);
 
 main() {
