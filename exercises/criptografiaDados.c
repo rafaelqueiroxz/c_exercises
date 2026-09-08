@@ -19,10 +19,14 @@
 
 // Seção de importação
 #include <stdio.h>
+#include <string.h>
 
 // Seção de prototipação
-char merge(char *,char *);
+char *merge(char *, char *);
 void exibirCrypto(char *);
+
+// Variaveis Globais
+char crypto[80];
 
 int main()
 {
@@ -31,30 +35,39 @@ int main()
 
     printf("Digite seu nome: ");
     fgets(nome, sizeof(nome), stdin);
+    nome[strcspn(nome, "\n")] = '\0';
     printf("Digite seu CPF e o seu RG separando-os por espaco: ");
     fgets(cpfRg, sizeof(cpfRg), stdin);
+    cpfRg[strcspn(cpfRg, "\n")] = '\0';
 
     exibirCrypto(merge(nome, cpfRg));
 
 }
 
-char merge(char nome[], char cpfRg[]) {
-
-    char crypto[80];
+char *merge(char nome[], char cpfRg[]) {
 
     int cont1 = 0;
     int cont2 = 0;
-    while(nome[i] != '\0' && cpfRg[i] != '\0') {
-        if (i % 2 == 0 && ) {
+    int i = 0;
+    while(nome[cont1] != '\0' || cpfRg[cont2] != '\0') {
+        if (i % 2 == 0 && nome[cont1] != '\0' ) {
             crypto[i] = nome[cont1];
             cont1++;
             i++;
-        } else {
+        } else if (i % 2 != 0 || cpfRg[cont2] != '\0') {
             crypto[i] = cpfRg[cont2];
             cont2++;
             i++;
         }
     }
+    crypto[i] = '\0';
+    
+    return crypto;
+}
+
+void exibirCrypto(char crypto[]) {
+
+    printf("Informacoes criptografadas: %s", crypto);
 
 }
 
