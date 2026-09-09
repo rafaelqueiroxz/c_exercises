@@ -37,7 +37,9 @@ float calcularMedia(float *M){
 	for(int i = 0; i < 6; i++){
 		media += M[i];
 	}
-	media /= 6.0;
+	media /= 6;
+	
+	return media;
 }
 
 void imprimirSituacao(float media){
