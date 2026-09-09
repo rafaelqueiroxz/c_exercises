@@ -1,6 +1,6 @@
 /*
 	Name: criptografiaDados.c
-	Author: Rafael A. Queiroz
+	Author: Rafael A. Queiroz / Correção do professor Alexandre Cassiano
 	Date: 04/09/26
 	Description: 	Crie uma função que receba dois vetores, um com seu nome completo
                     e outro com os dados do seu CPF e RG. Nesta função, chamada
@@ -22,52 +22,40 @@
 #include <string.h>
 
 // Seção de prototipação
-char *merge(char *, char *);
-void exibirCrypto(char *);
-
-// Variaveis Globais
-char crypto[80];
+void merge(char *, char *); // Função para combinar os dois vetores
 
 int main()
 {
-    char nome[50];
-    char cpfRg[30];
+    char nome[30];
+    char docs[21];
 
-    printf("Digite seu nome: ");
-    fgets(nome, sizeof(nome), stdin);
-    nome[strcspn(nome, "\n")] = '\0';
-    printf("Digite seu CPF e o seu RG separando-os por espaco: ");
-    fgets(cpfRg, sizeof(cpfRg), stdin);
-    cpfRg[strcspn(cpfRg, "\n")] = '\0';
+    printf("Digite seu nome completo: "); gets(nome);
+    printf("Digite seu CPF e seu RG: "); gets(docs);
 
-    exibirCrypto(merge(nome, cpfRg));
+    merge(nome, docs);
 
 }
 
-char *merge(char nome[], char cpfRg[]) {
+void merge(char nome[], char docs[]) {
 
-    int cont1 = 0;
-    int cont2 = 0;
-    int i = 0;
-    while(nome[cont1] != '\0' || cpfRg[cont2] != '\0') {
-        if (i % 2 == 0 && nome[cont1] != '\0' ) {
-            crypto[i] = nome[cont1];
-            cont1++;
-            i++;
-        } else if (i % 2 != 0 || cpfRg[cont2] != '\0') {
-            crypto[i] = cpfRg[cont2];
-            cont2++;
-            i++;
+    int i,j;
+    for(i = 0; nome[i] != '\0'; i++) {
+    }
+
+    int tamanho = i + 21; // Tamanho da String + Tamanho do vetor 'docs'
+    char crypto[tamanho];
+
+    for(i = 0, j = 0; i < tamanho; i++) {
+        if (nome[i] != '\0') {
+            crypto[j] = nome[i];
+            crypto[j+1] = docs[i];
+
+            j = j + 2;
         }
     }
-    crypto[i] = '\0';
-    
-    return crypto;
-}
 
-void exibirCrypto(char crypto[]) {
-
-    printf("Informacoes criptografadas: %s", crypto);
+    for(i = 0; i < tamanho; i++) {
+        printf("%c | ", crypto[i]);
+    }
 
 }
-
