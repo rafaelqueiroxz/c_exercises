@@ -1,0 +1,4 @@
+Desafio da semana!
+
+- Entender como fazer o cálculo do determinante.
+- Entender a estrutura de pointer to pointer (ponteiro para ponteiro).
