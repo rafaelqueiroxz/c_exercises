@@ -34,11 +34,13 @@ void analisarNumero(int num) {
 	if (num == 0) {
 		return;
 	}
+	
 	if (num % 2 == 0) {
 		printf("O numero digitado eh par!\n");
 	} else {
 		printf("O numero digitado eh impar!\n");
 	}
+	
 	lerNumero();
 	
 }
