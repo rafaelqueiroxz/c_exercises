@@ -1,0 +1,6 @@
+Aluno: Beatriz | Nota: 10.00
+Status: Aprovado
+
+
+====> Fim do Arquivo
+Alterado por Rafael Queiroz no dia 18/11/2026

@@ -1,0 +1,36 @@
+Prontuario do Hospital Santa Ana - 18/11/2026
+
+Paciente 1:
+Nome: Rafael
+Idade: 18
+Peso: 80.40
+Altura: 1.80
+IMC = 24.81 | Peso adequado
+
+Paciente 2:
+Nome: Luiz
+Idade: 19
+Peso: 102.20
+Altura: 1.85
+IMC = 29.86 | Sobrepeso
+
+Paciente 3:
+Nome: Edgard
+Idade: 18
+Peso: 75.50
+Altura: 1.75
+IMC = 24.65 | Peso adequado
+
+Paciente 4:
+Nome: Davi
+Idade: 18
+Peso: 76.60
+Altura: 1.72
+IMC = 25.89 | Sobrepeso
+
+Paciente 5:
+Nome: Dunha
+Idade: 67
+Peso: 202.20
+Altura: 1.50
+IMC = 89.87 | Obesidade Grau III
